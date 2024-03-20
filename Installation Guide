@@ -4,8 +4,15 @@
 **Case 1] For Installation of k8s  on Ubuntu Version-- 22.04.4 LTS   you can run Script .**
             
           Step 1 : git clone https://github.com/ankitdchandak/K8s-single-cluster-install.git
- 
-          Step 2 : sh script.sh
+                   cd K8s-single-cluster-install/
+
+          Step 2 : Run this all Scripts step by step 
+                   > sh network.sh
+                   > sh docker-install.sh
+                   > sh containerd.sh
+                   > sh kubeadm-install.sh
+                   > sh config-kubelet.sh
+                   > sh install-calico.sh
             (It will run and install complete Kubernetes Cluster the steps which are given below ) 
           
           Step 3 :  Run this Command and check the node is ready or not 
