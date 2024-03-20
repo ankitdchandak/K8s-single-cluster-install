@@ -1,44 +1,9 @@
 # Kubernetes
 ### **Single Cluster Kubernetes  Install on Ubuntu** 
 
-**Case 1] For Installation of k8s  on Ubuntu Version-- 22.04.4 LTS   you can run Script .**
+** For Installation of k8s  on Ubuntu Version-- 22.04.4 LTS .**
             
-          Step 1 : git clone https://github.com/ankitdchandak/K8s-single-cluster-install.git
-                   cd K8s-single-cluster-install/
-
-          Step 2 : Run this all Scripts step by step 
-                   > sh network.sh
-                   > sh docker-install.sh
-                   > sh containerd.sh
-                   > sh kubeadm-install.sh
-                   > sh config-kubelet.sh
-                   > sh install-calico.sh
-            (It will run and install complete Kubernetes Cluster the steps which are given below ) 
-          
-          Step 3 :  Run this Command and check the node is ready or not 
-                      kubectl get nodes
-
-          Step 4 (optional ) If you pods are in Pending State run this command (For Troubleshooting )
-                          kubectl describe pod  <name-pod>
-                  
-                 If  this error comes
-                 (Warning  FailedScheduling  101s  default-scheduler  0/1 nodes are available: 1 node(s) had 
-                 untolerated taint 
-                 {node-role.kubernetes.io/control-plane: }. preemption: 0/1 nodes are available: 1 Preemption is not 
-                 helpful for scheduling.)
-                     
-                 Run this command 
-                 >kubectl get nodes
-
-                 >kubectl taint nodes <node-name> node-role.kubernetes.io/control-plane:NoSchedule-
-                          
-
-
-
-
-                                                  **OR**
-
-**Case 2**
+**Case 1**
 **Complete Steps For Installation** 
 
 Step 1: Update and Upgrade Ubuntu (all nodes)
